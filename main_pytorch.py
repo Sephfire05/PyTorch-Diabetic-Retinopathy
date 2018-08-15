@@ -25,7 +25,7 @@ import torch.nn.functional as F # Transform params
 from torchvision import transforms
 from torch.utils.data import DataLoader
 import torch
-from torch.utils.data.sampler import WeightedRandomSampler, SubsetRandomSampler
+from torch.utils.data.sampler import SubsetRandomSampler
 ########################################################
 mode = Net(4).cuda()
 
@@ -37,9 +37,8 @@ batch_size = 352
                                 #     std=[x,x,x])
     
 # Optimizer param
-optimizer = optim.SGD(model.parameters(),lr=1e-3, momentum=0.9, weight_decay=0.0005) # Fine tune these
-
-# criterion = ConvolutedLoss()
+optimizer = optim.SGD(model.parameters(),lr=1e-3, momentum=0.9,) # Fine tune these
+criterion = CrossEntropyLoss()
 # Need to figure this parameter out
 # .cuda() at end
 
