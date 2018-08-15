@@ -4,7 +4,8 @@
 # In[11]:
 
 
-# Need Custom imports of dataload, training, validation, model selection, logger, prediction, data augmentation, loss, sampler
+# Need Custom imports of dataload, training, validation, logger, prediction, data augmentation, custom loss, sampler for validation
+# dataloader
 from src.neuro import Net # Baseline model
 
 
