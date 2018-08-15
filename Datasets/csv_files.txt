@@ -1,0 +1,3 @@
+Store csv files here
+trainLabels.csv
+sampleSubmission.csv
